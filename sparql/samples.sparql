@@ -1,0 +1,9 @@
+SELECT distinct ?subject ?title ?description
+WHERE {
+?subject a <http://www.w3.org/2002/07/owl#Ontology>
+OPTIONAL {?subject <http://purl.org/dc/terms/description> ?description}
+OPTIONAL {?subject <http://purl.org/dc/terms/title> ?title}
+} 
+ORDER BY ?subject
+LIMIT 100
+
